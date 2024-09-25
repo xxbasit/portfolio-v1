@@ -9,7 +9,7 @@ const Navbar = ({ page }: { page: "home" | "logo" }) => {
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <Link href="/logo-designs">
+        <Link href="/about">
           <p className="text-white underline">About</p>
         </Link>
       </div>
