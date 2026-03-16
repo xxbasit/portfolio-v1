@@ -13,11 +13,14 @@ const Navbar = ({ page }: { page: "home" | "logo" }) => {
       <Link href="/" className="text-xl font-extrabold text-white tracking-tight">
         Abdul Basit<span className="text-cyan-400">.</span>
       </Link>
-      <div className="hidden md:flex items-center gap-6">
+
+      {/* Desktop nav */}
+      <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }} className="hidden md:flex">
         {navLinks.map((l) => (
           <a
             key={l.label}
             href={l.href}
+            style={{ padding: "0 0.25rem" }}
             className="text-sm text-gray-400 hover:text-white transition-colors"
           >
             {l.label}
@@ -27,17 +30,19 @@ const Navbar = ({ page }: { page: "home" | "logo" }) => {
           href="https://github.com/basitkhan32"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm border border-white/15 text-white px-4 py-1.5 rounded-lg hover:bg-white/10 transition-colors"
+          style={{ border: "1px solid rgba(255,255,255,0.2)", borderRadius: "0.5rem", padding: "0.375rem 1rem" }}
+          className="text-sm text-white hover:bg-white/10 transition-colors"
         >
           GitHub ↗
         </a>
       </div>
-      {/* Mobile */}
+
+      {/* Mobile: GitHub only */}
       <a
         href="https://github.com/basitkhan32"
         target="_blank"
         rel="noopener noreferrer"
-        className="md:hidden text-sm text-gray-400 hover:text-white transition-colors"
+        className="flex md:hidden text-sm text-gray-400 hover:text-white transition-colors"
       >
         GitHub ↗
       </a>
