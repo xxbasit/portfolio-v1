@@ -1,62 +1,49 @@
-import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiLinkedin } from "react-icons/fi";
-import { LuTwitter } from "react-icons/lu";
-import { MdOutlineMailOutline } from "react-icons/md";
+import { FiLinkedin, FiGithub, FiMail } from "react-icons/fi";
+
 const Footer = ({ page }: { page: "home" | "logo" }) => {
   return (
-    <div className="flex w-full items-center justify-between px-4 ">
-      <div
-        style={{
-          gap: "1rem",
-          transform: "translateY(-20px)",
-        }}
-        className="flex flex-col space-y-4"
-      >
+    <footer className="flex w-full items-center justify-between pt-8 border-t border-white/8 mt-8">
+      <p className="text-gray-600 text-xs">
+        © {new Date().getFullYear()} Abdul Basit Khan
+      </p>
+      <div className="flex items-center gap-4">
         <a
-          href="https://www.linkedin.com/in/basit-pm/"
+          href="https://linkedin.com/in/basit-pmp"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center"
+          className="text-gray-500 hover:text-white transition-colors"
+          aria-label="LinkedIn"
         >
-          <FiLinkedin size={20} />
+          <FiLinkedin size={18} />
         </a>
         <a
-          href="https://twitter.com/bas1t_khan"
+          href="https://github.com/basitkhan32"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center"
+          className="text-gray-500 hover:text-white transition-colors"
+          aria-label="GitHub"
         >
-          <LuTwitter size={20} />
+          <FiGithub size={18} />
         </a>
         <a
           href="mailto:work.basitkhan@gmail.com"
+          className="text-gray-500 hover:text-white transition-colors"
+          aria-label="Email"
+        >
+          <FiMail size={18} />
+        </a>
+        <a
+          href="https://wa.me/923000032320"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center"
+          className="text-gray-500 hover:text-green-400 transition-colors"
+          aria-label="WhatsApp"
         >
-          <MdOutlineMailOutline size={20} />
+          <FaWhatsapp size={18} />
         </a>
       </div>
-
-      {/* whatsapp number */}
-      <div style={{ gap: "10px" }} className="flex items-center">
-        <Link href="https://wa.me/923000032320" legacyBehavior>
-          <a target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp size={20} />
-          </a>
-        </Link>
-        <Link href="https://wa.me/923000032320" legacyBehavior>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-base cursor-pointer"
-          >
-            +92 300 0032320
-          </a>
-        </Link>
-      </div>
-    </div>
+    </footer>
   );
 };
 

@@ -5,8 +5,15 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abdul Basit Khan",
-  description: "Abdul Basit khan Project Manager",
+  title: "Abdul Basit Khan — DevOps & Cloud Engineer",
+  description:
+    "Certified DevOps & Cloud Engineer with 3+ years of experience on AWS, GCP, and Azure. Specialising in Kubernetes, Terraform, CI/CD, GitOps, and observability.",
+  openGraph: {
+    title: "Abdul Basit Khan — DevOps & Cloud Engineer",
+    description:
+      "AWS · Kubernetes · Terraform · GitOps · Observability. Open to freelance & contract engagements.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
